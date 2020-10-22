@@ -1,0 +1,11 @@
+
+<a href="Add">Vložit nový kontakt</a>
+<br><br>
+<table>
+
+<?php foreach ($this->contacts as $contact) : ?>
+    <tr>
+        <td> <?= htmlspecialchars($contact['name']) ?> </td> <td> <?= htmlspecialchars($contact['tel']) ?> </td> <td> <?= htmlspecialchars($contact['mail']) ?> </td> <td> <?= htmlspecialchars($contact['note']) ?> </td> <td> <?="<a href='/Contacts/remove/".$contact['id']."'>Odstranit</a>"?>  </td> </td> <td> <?="<a href='".str_replace(' ', '-', $contact['name'])."'>Upravit</a>"?> </td>
+    </tr>
+<?php endforeach ?>
+</table>

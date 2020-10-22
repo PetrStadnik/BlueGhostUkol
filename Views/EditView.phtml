@@ -1,0 +1,15 @@
+<h1>Upravit kontakt</h1>
+
+<form method="post" id="new-form">
+    Jméno a příjmení<br />
+    <input type="text" name="name" required="required" value="<?=$this->editContact['name']?>" /><br />
+    Telefon<br />
+    <input type="tel" name="tel" required="required" value="<?=$this->editContact['tel']?>"/><br />
+    Email<br />
+    <input type="email" name="mail" required="required" value="<?=$this->editContact['mail']?>" /><br />
+    Poznámka<br />
+    <textarea name="note"><?=$this->editContact['note']?></textarea><br />
+    <input type="submit" value="Uložit změny" />
+</form>
+
+<a href="/"> Zpět bez uložení</a>
